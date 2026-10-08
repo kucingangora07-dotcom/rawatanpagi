@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rawatan Pagi - Gereja Pemulihan</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>RAWATAN PAGI</h2>
+        <p id="status">Mengarahkan ke materi hari ini...</p>
+    </div>
+
+    <script>
+        // DAFTAR LINK SWAY BERDASARKAN TANGGAL (1 - 31)
+        // Silakan ganti link di dalam tanda kutip sesuai link Sway Anda
+        const linkSway = {
+            1: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_1",
+            2: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_2",
+            3: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_3",
+            4: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_4",
+            5: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_5",
+            6: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_6",
+            7: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_7",
+            8: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_8",
+            9: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_9",
+            10: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_10",
+            // Silakan teruskan sampai tanggal 31...
+        };
+
+        // Ambil angka tanggal hari ini (1 - 31)
+        const tanggalHariIni = new Date().getDate();
+
+        // Cek dan alihkan otomatis
+        if (linkSway[tanggalHariIni] && linkSway[tanggalHariIni].startsWith("http")) {
+            window.location.href = linkSway[tanggalHariIni];
+        } else {
+            document.getElementById("status").innerText = "Materi Rawatan Pagi untuk tanggal " + tanggalHariIni + " belum tersedia.";
+        }
+    </script>
+</body>
+</html>
