@@ -3,56 +3,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rawatan Pagi - Gereja Pemulihan</title>
+    <title>Rawatan Pagi - FKKP</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
         body {
-            font-family: sans-serif;
+            background-color: #f2efe9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            background-color: #f7f4ed;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Header Pemandangan */
+        .header {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), 
+                        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+            height: 260px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
             text-align: center;
-            padding: 50px 20px;
-            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+            line-height: 1.2;
+        }
+
+        .header h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+        }
+
+        .header .date-badge {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Container Content */
+        .content {
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex-grow: 1;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
             color: #333;
+            margin-bottom: 5px;
         }
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            max-width: 400px;
-            margin: 0 auto;
+
+        .page-subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
         }
+
+        /* Style Tombol Utama */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 14px 18px;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            text-align: left;
+        }
+
+        .btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+        }
+
+        .btn-icon {
+            font-size: 20px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+        }
+
+        /* Warna Tombol */
+        .btn-brown  { background: linear-gradient(to bottom, #7f5539, #5c3d2e); border: 1px solid #5c3d2e; }
+        .btn-green  { background: linear-gradient(to bottom, #5cb85c, #3d8b3d); border: 1px solid #4cae4c; }
+        .btn-orange { background: linear-gradient(to bottom, #f0ad4e, #d9831f); border: 1px solid #eea236; }
+        .btn-blue   { background: linear-gradient(to bottom, #337ab7, #1f507e); border: 1px solid #2e6da4; }
+        .btn-purple { background: linear-gradient(to bottom, #8e44ad, #6c3483); border: 1px solid #7d3c98; }
+        .btn-teal   { background: linear-gradient(to bottom, #16a085, #117a65); border: 1px solid #117a65; }
+
+        .btn-back {
+            background: transparent;
+            color: #555;
+            border: 1px solid #ccc;
+            text-align: center;
+            justify-content: center;
+            margin-top: 15px;
+            box-shadow: none;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h2>RAWATAN PAGI</h2>
-        <p id="status">Mengarahkan ke materi hari ini...</p>
+
+    <div class="container">
+        
+        <!-- ================= HALAMAN 1: BERANDA UTAMA ================= -->
+        <div id="halamanUtama">
+            <div class="header">
+                <h1>Rawatan Pagi</h1>
+                <h2>FKKP</h2>
+                <div class="date-badge" id="tampilTanggal">Hari ini: -</div>
+            </div>
+
+            <div class="content">
+                <!-- Tombol 1: Baca Penyegaran Pagi (Otomatis Hari Ini) -->
+                <button class="btn btn-green" onclick="bukaSwayHarian(hariIni)">
+                    <span class="btn-icon">📖</span>
+                    <span>Baca Penyegaran Pagi</span>
+                </button>
+
+                <!-- Tombol 2: Dengar Suara -->
+                <a href="https://sway.cloud.microsoft/LINK_AUDIO" target="_blank" class="btn btn-orange">
+                    <span class="btn-icon">🎧</span>
+                    <span>Dengar Suara</span>
+                </a>
+
+                <!-- Tombol 3: Lihat Video -->
+                <a href="https://sway.cloud.microsoft/LINK_VIDEO" target="_blank" class="btn btn-blue">
+                    <span class="btn-icon">📹</span>
+                    <span>Lihat Video</span>
+                </a>
+
+                <!-- Tombol 4: Pilih Hari / Link Mingguan -->
+                <button class="btn btn-purple" onclick="bukaTampilanPilihHari()">
+                    <span class="btn-icon">📚</span>
+                    <span>Link Mingguan</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ================= HALAMAN 2: PILIH HARI ================= -->
+        <div id="halamanPilihHari" class="hidden">
+            <div class="header" style="height: 180px;">
+                <h1>Pilih Hari</h1>
+                <div class="date-badge" id="tampilMingguKe" style="margin-top: 10px;">Minggu 1</div>
+            </div>
+
+            <div class="content">
+                <!-- 0. Garis Besar Minggu Ini -->
+                <button class="btn btn-brown" onclick="bukaSwayMingguan()">
+                    <span class="btn-icon">0</span>
+                    <span>Garis Besar Minggu ini</span>
+                </button>
+
+                <!-- Hari 1 - 6 -->
+                <button class="btn btn-brown" onclick="bukaSwayHarian(1)">
+                    <span class="btn-icon">1</span>
+                    <span>Hari 1 - Senin</span>
+                </button>
+
+                <button class="btn btn-green" onclick="bukaSwayHarian(2)">
+                    <span class="btn-icon">2</span>
+                    <span>Hari 2 - Selasa</span>
+                </button>
+
+                <button class="btn btn-blue" onclick="bukaSwayHarian(3)">
+                    <span class="btn-icon">3</span>
+                    <span>Hari 3 - Rabu</span>
+                </button>
+
+                <button class="btn btn-purple" onclick="bukaSwayHarian(4)">
+                    <span class="btn-icon">4</span>
+                    <span>Hari 4 - Kamis</span>
+                </button>
+
+                <button class="btn btn-orange" onclick="bukaSwayHarian(5)">
+                    <span class="btn-icon">5</span>
+                    <span>Hari 5 - Jumat</span>
+                </button>
+
+                <button class="btn btn-teal" onclick="bukaSwayHarian(6)">
+                    <span class="btn-icon">6</span>
+                    <span>Hari 6 - Sabtu</span>
+                </button>
+
+                <!-- Tombol Kembali -->
+                <button class="btn btn-back" onclick="bukaHalamanUtama()">
+                    Kembali ke Beranda
+                </button>
+            </div>
+        </div>
+
+        <div class="footer">
+            FKKP - Rawatan Pagi
+        </div>
     </div>
 
     <script>
-        // DAFTAR LINK SWAY BERDASARKAN TANGGAL (1 - 31)
-        // Silakan ganti link di dalam tanda kutip sesuai link Sway Anda
+        // =========================================================================
+        // 1. SET TANGGAL SENIN MINGGU KE-1
+        // =========================================================================
+        const tanggalMulaiMinggu1 = new Date(2026, 9, 5); // Contoh: Senin, 5 Oktober 2026
+
+        // =========================================================================
+        // 2. DAFTAR LINK SWAY HARIAN (12 MINGGU x 7 HARI)
+        // =========================================================================
         const linkSway = {
-            1: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_1",
-            2: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_2",
-            3: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_3",
-            4: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_4",
-            5: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_5",
-            6: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_6",
-            7: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_7",
-            8: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_8",
-            9: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_9",
-            10: "https://sway.cloud.microsoft/LINK_SWAY_TANGGAL_10",
-            // Silakan teruskan sampai tanggal 31...
+            // --- MINGGU 1 ---
+            "m1_1": "https://sway.cloud.microsoft/LINK_SWAY_HARIAN_M1_SENIN",
+            "m1_2": "https://sway.cloud.microsoft/LINK_SWAY_HARIAN_M1_SELASA",
+            "m1_3": "https://sway.cloud.microsoft/LINK_SWAY_HARIAN_M1_RABU",
+            "m1_4": "https://sway.cloud.microsoft/LINK_SWAY_HARIAN_M1_KAMIS",
+            "m1_5": "https://sway.cloud.microsoft/LINK_SWAY_HARIAN_M1_JUMAT",
+            "m1_6": "https://sway.cloud.microsoft/LINK_SWAY_HARIAN_M1_SABTU",
+            "m1_0": "https://sway.cloud.microsoft/LINK_SWAY_HARIAN_M1_MINGGU",
+
+            // --- MINGGU 2 ---
+            "m2_1": "https://sway.cloud.microsoft/LINK_SWAY_HARIAN_M2_SENIN",
+            "m2_2": "https://sway.cloud.microsoft/LINK_SWAY_HARIAN_M2_SELASA",
+            "m2_3": "https://sway.cloud.microsoft/LINK_SWAY_HARIAN_M2_RABU",
+            "m2_4": "https://sway.cloud.microsoft/LINK_SWAY_HARIAN_M2_KAMIS",
+            "m2_5": "https://sway.cloud.microsoft/LINK_SWAY_HARIAN_M2_JUMAT",
+            "m2_6": "https://sway.cloud.microsoft/LINK_SWAY_HARIAN_M2_SABTU",
+            "m2_0": "https://sway.cloud.microsoft/LINK_SWAY_HARIAN_M2_MINGGU",
+            
+            // ... Silakan teruskan sampai m12_0
         };
 
-        // Ambil angka tanggal hari ini (1 - 31)
-        const tanggalHariIni = new Date().getDate();
+        // =========================================================================
+        // 3. DAFTAR LINK SWAY MINGGUAN (GARIS BESAR MINGGU INI)
+        // =========================================================================
+        const linkSwayMingguan = {
+            "m1": "https://sway.cloud.microsoft/LINK_MINGGUAN_1",
+            "m2": "https://sway.cloud.microsoft/LINK_MINGGUAN_2",
+            "m3": "https://sway.cloud.microsoft/LINK_MINGGUAN_3",
+            // ... Silakan teruskan sampai m12
+        };
 
-        // Cek dan alihkan otomatis
-        if (linkSway[tanggalHariIni] && linkSway[tanggalHariIni].startsWith("http")) {
-            window.location.href = linkSway[tanggalHariIni];
-        } else {
-            document.getElementById("status").innerText = "Materi Rawatan Pagi untuk tanggal " + tanggalHariIni + " belum tersedia.";
+        // =========================================================================
+        // 4. LOGIKA PERHITUNGAN
+        // =========================================================================
+        const sekarang = new Date();
+        
+        // Format Tanggal: "Hari ini: Rabu, 7 Oktober 2026"
+        const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        const namaBulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+        
+        const stringTanggal = "Hari ini: " + namaHari[sekarang.getDay()] + ", " + sekarang.getDate() + " " + namaBulan[sekarang.getMonth()] + " " + sekarang.getFullYear();
+        document.getElementById("tampilTanggal").innerText = stringTanggal;
+
+        // Hitung Minggu Ke-
+        const selisihWaktu = sekarang.getTime() - tanggalMulaiMinggu1.getTime();
+        const selisihHari = Math.floor(selisihWaktu / (1000 * 60 * 60 * 24));
+
+        let mingguKe = Math.floor(selisihHari / 7) + 1;
+        if (mingguKe < 1) mingguKe = 1;
+        if (mingguKe > 12) mingguKe = 12;
+
+        const hariIni = sekarang.getDay(); 
+        document.getElementById("tampilMingguKe").innerText = "Minggu " + mingguKe;
+
+        // Navigasi Halaman
+        function bukaTampilanPilihHari() {
+            document.getElementById("halamanUtama").classList.add("hidden");
+            document.getElementById("halamanPilihHari").classList.remove("hidden");
+        }
+
+        function bukaHalamanUtama() {
+            document.getElementById("halamanPilihHari").classList.add("hidden");
+            document.getElementById("halamanUtama").classList.remove("hidden");
+        }
+
+        // Fungsi Buka Sway Harian
+        function bukaSwayHarian(hari) {
+            const kunciHarian = `m${mingguKe}_${hari}`;
+            if (linkSway[kunciHarian] && linkSway[kunciHarian].startsWith("http")) {
+                window.location.href = linkSway[kunciHarian];
+            } else {
+                alert("Link materi belum diatur atau link belum valid.");
+            }
+        }
+
+        // Fungsi Buka Sway Mingguan
+        function bukaSwayMingguan() {
+            const kunciMingguan = `m${mingguKe}`;
+            if (linkSwayMingguan[kunciMingguan] && linkSwayMingguan[kunciMingguan].startsWith("http")) {
+                window.location.href = linkSwayMingguan[kunciMingguan];
+            } else {
+                alert("Link Garis Besar Mingguan belum diatur atau link belum valid.");
+            }
         }
     </script>
 </body>
