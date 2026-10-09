@@ -1,0 +1,19 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, sans-serif; }
+body { background-color: #f2efe9; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+.container { width: 100%; max-width: 420px; background-color: #f7f4ed; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.15); display: flex; flex-direction: column; position: relative; }
+.header { position: relative; background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80') center/cover no-repeat; height: 220px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px; }
+.header h1 { font-size: 28px; font-weight: 700; text-shadow: 2px 2px 6px rgba(0,0,0,0.7); }
+.header h2 { font-size: 22px; font-weight: 600; margin-bottom: 15px; }
+.header .date-badge { background: rgba(0, 0, 0, 0.4); padding: 6px 16px; border-radius: 20px; font-size: 14px; border: 1px solid rgba(255, 255, 255, 0.2); }
+.content { padding: 25px 20px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1; }
+.btn { display: flex; align-items: center; justify-content: flex-start; padding: 14px 18px; border-radius: 10px; color: white; text-decoration: none; font-weight: 600; font-size: 16px; border: none; width: 100%; cursor: pointer; }
+.btn-icon { font-size: 20px; margin-right: 12px; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: rgba(0, 0, 0, 0.15); border-radius: 6px; }
+.btn-brown  { background: linear-gradient(to bottom, #7f5539, #5c3d2e); }
+.btn-green  { background: linear-gradient(to bottom, #5cb85c, #3d8b3d); }
+.btn-orange { background: linear-gradient(to bottom, #f0ad4e, #d9831f); }
+.btn-blue   { background: linear-gradient(to bottom, #337ab7, #1f507e); }
+.btn-purple { background: linear-gradient(to bottom, #8e44ad, #6c3483); }
+.btn-teal   { background: linear-gradient(to bottom, #16a085, #117a65); }
+.btn-back   { background: transparent; color: #555; border: 1px solid #ccc; justify-content: center; }
+.footer { text-align: center; padding: 15px; font-size: 12px; color: #777; }
+.hidden { display: none !important; }

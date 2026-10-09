@@ -1,65 +1,65 @@
-{
-    "2026-10-04": {
-        "hari": "00_Minggu_2026-10-04",
-        "buku": "Kaum Beriman (1)",
-        "minggu": "Minggu 01",
-        "renungan": "KB1_M01_00_Minggu_2026-10-04_Garis_Besar.docx.html",
-        "audio": "KB1_M01_V00_Minggu_2026-10-04_Rahasia_Pertumbuhan_Hayat_Sehari-hari.mp3",
-        "video": "",
-        "folder_path": "Pustaka/Kaum Beriman (1)/Minggu 01/00_Minggu_2026-10-04"
-    },
-    "2026-10-05": {
-        "hari": "01_Senin_2026-10-05",
-        "buku": "Kaum Beriman (1)",
-        "minggu": "Minggu 01",
-        "renungan": "",
-        "audio": "KB1_M01_V01_Senin_2026-10-05_Proses_Pemuridan_Menjadikan_Murid.mp3",
-        "video": "",
-        "folder_path": "Pustaka/Kaum Beriman (1)/Minggu 01/01_Senin_2026-10-05"
-    },
-    "2026-10-06": {
-        "hari": "02_Selasa_2026-10-06",
-        "buku": "Kaum Beriman (1)",
-        "minggu": "Minggu 01",
-        "renungan": "",
-        "audio": "KB1_M01_V02_Selasa_2026-10-06_Mengapa_Pertumbuhan_Hayat_Dimulai_dari_Pikiran_Anda.mp3",
-        "video": "",
-        "folder_path": "Pustaka/Kaum Beriman (1)/Minggu 01/02_Selasa_2026-10-06"
-    },
-    "2026-10-07": {
-        "hari": "03_Rabu_2026-10-07",
-        "buku": "Kaum Beriman (1)",
-        "minggu": "Minggu 01",
-        "renungan": "KB1_M01_03_Rabu_2026-10-07_Rawatan_Pagi.docx.html",
-        "audio": "KB1_M01_S03_Rabu_2026-10-07_Empat_Tahap_Pertumbuhan_Manusia_Allah.m4a",
-        "video": "KB1_M01_V03_Rabu_2026-10-07_Rahasia_Paulus_Prinsip_Mati_untuk_Hidup.mp4",
-        "folder_path": "Pustaka/Kaum Beriman (1)/Minggu 01/03_Rabu_2026-10-07"
-    },
-    "2026-10-08": {
-        "hari": "04_Kamis_2026-10-08",
-        "buku": "Kaum Beriman (1)",
-        "minggu": "Minggu 01",
-        "renungan": "KB1_M01_04_Kamis_2026-10-08_Rawatan_Pagi.docx.html",
-        "audio": "KB1_M01_S04_Kamis_2026-10-08_Pertumbuhan_Hayat_Lewat_Penerapan_Firman.m4a",
-        "video": "KB1_M01_V04_Kamis_2026-10-08_Bagaimana_Teks_Alkitab_Menjadi_Pertumbuhan_Hayat.mp4",
-        "folder_path": "Pustaka/Kaum Beriman (1)/Minggu 01/04_Kamis_2026-10-08"
-    },
-    "2026-10-09": {
-        "hari": "05_Jumat_2026-10-09",
-        "buku": "Kaum Beriman (1)",
-        "minggu": "Minggu 01",
-        "renungan": "KB1_M01_05_Jumat_2026-10-09_Rawatan_Pagi.docx.html",
-        "audio": "KB1_M01_V05_Jumat_2026-10-09_Bagaimana_Pengudusan_Subjektif_Mengubah_Watak_Kita.mp3",
-        "video": "",
-        "folder_path": "Pustaka/Kaum Beriman (1)/Minggu 01/05_Jumat_2026-10-09"
-    },
-    "2026-10-10": {
-        "hari": "06_Sabtu_2026-10-10",
-        "buku": "Kaum Beriman (1)",
-        "minggu": "Minggu 01",
-        "renungan": "",
-        "audio": "KB1_M01_V06_Sabtu_2026-10-10_Memperhidupkan_Kristus_Lewat_Kesatuan_Organik.mp3",
-        "video": "",
-        "folder_path": "Pustaka/Kaum Beriman (1)/Minggu 01/06_Sabtu_2026-10-10"
-    }
+﻿{
+    "2026-10-06":  {
+                       "video":  "",
+                       "audio":  "KB1_M01_V02_Selasa_2026-10-06_Mengapa_Pertumbuhan_Hayat_Dimulai_dari_Pikiran_Anda.mp4.mp4",
+                       "hari":  "02_Selasa_2026-10-06",
+                       "buku":  "Kaum Beiman (1)",
+                       "minggu":  "Minggu 01",
+                       "renungan":  "",
+                       "folder_path":  "Pustaka/Kaum Beiman (1)/Minggu 01/02_Selasa_2026-10-06"
+                   },
+    "2026-10-07":  {
+                       "video":  "KB1_M01_V03_Rabu_2026-10-07_Rahasia_Paulus_Prinsip_Mati_untuk_Hidup.mp4.mp4",
+                       "audio":  "KB1_M01_S03_Rabu_2026-10-07_Empat_Tahap_Pertumbuhan_Manusia_Allah.m4a.m4a",
+                       "hari":  "03_Rabu_2026-10-07",
+                       "buku":  "Kaum Beiman (1)",
+                       "minggu":  "Minggu 01",
+                       "renungan":  "KB1_M01_03_Rabu_2026-10-07_Rawatan_Pagi.docx.html",
+                       "folder_path":  "Pustaka/Kaum Beiman (1)/Minggu 01/03_Rabu_2026-10-07"
+                   },
+    "2026-10-04":  {
+                       "video":  "",
+                       "audio":  "KB1_M01_V00_Minggu_2026-10-04_Rahasia_Pertumbuhan_Hayat_Sehari-hari.mp4.mp4",
+                       "hari":  "00_Minggu_2026-10-04",
+                       "buku":  "Kaum Beiman (1)",
+                       "minggu":  "Minggu 01",
+                       "renungan":  "KB1_M01_00_Minggu_2026-10-04_Garis_Besar.docx.html",
+                       "folder_path":  "Pustaka/Kaum Beiman (1)/Minggu 01/00_Minggu_2026-10-04"
+                   },
+    "2026-10-09":  {
+                       "video":  "",
+                       "audio":  "KB1_M01_V05_Jumat_2026-10-09_Bagaimana_Pengudusan_Subjektif_Mengubah_Watak_Kita.mp4.mp4",
+                       "hari":  "05_Jumat_2026-10-09",
+                       "buku":  "Kaum Beiman (1)",
+                       "minggu":  "Minggu 01",
+                       "renungan":  "KB1_M01_05_Jumat_2026-10-09_Rawatan_Pagi.docx.html",
+                       "folder_path":  "Pustaka/Kaum Beiman (1)/Minggu 01/05_Jumat_2026-10-09"
+                   },
+    "2026-10-10":  {
+                       "video":  "",
+                       "audio":  "KB1_M01_V06_Sabtu_2026-10-10_Memperhidupkan_Kristus_Lewat_Kesatuan_Organik.mp4.mp4",
+                       "hari":  "06_Sabtu_2026-10-10",
+                       "buku":  "Kaum Beiman (1)",
+                       "minggu":  "Minggu 01",
+                       "renungan":  "",
+                       "folder_path":  "Pustaka/Kaum Beiman (1)/Minggu 01/06_Sabtu_2026-10-10"
+                   },
+    "2026-10-08":  {
+                       "video":  "KB1_M01_V04_Kamis_2026-10-08_Bagaimana_Teks_Alkitab_Menjadi_Pertumbuhan_Hayat.mp4.mp4",
+                       "audio":  "KB1_M01_S04_Kamis_2026-10-08_Pertumbuhan_Hayat_Lewat_Penerapan_Firman.m4a.m4a",
+                       "hari":  "04_Kamis_2026-10-08",
+                       "buku":  "Kaum Beiman (1)",
+                       "minggu":  "Minggu 01",
+                       "renungan":  "KB1_M01_04_Kamis_2026-10-08_Rawatan_Pagi.docx.html",
+                       "folder_path":  "Pustaka/Kaum Beiman (1)/Minggu 01/04_Kamis_2026-10-08"
+                   },
+    "2026-10-05":  {
+                       "video":  "",
+                       "audio":  "KB1_M01_V01_Senin_2026-10-05_Proses_Pemuridan_Menjadikan_Murid.mp4.mp4",
+                       "hari":  "01_Senin_2026-10-05",
+                       "buku":  "Kaum Beiman (1)",
+                       "minggu":  "Minggu 01",
+                       "renungan":  "",
+                       "folder_path":  "Pustaka/Kaum Beiman (1)/Minggu 01/01_Senin_2026-10-05"
+                   }
 }
